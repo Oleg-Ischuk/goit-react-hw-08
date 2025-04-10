@@ -50,7 +50,6 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      // Clear contacts when user logs out
       .addCase(logout.fulfilled, (state) => {
         state.items = [];
         state.error = null;
